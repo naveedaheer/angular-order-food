@@ -15,7 +15,6 @@ export class ItemDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuService.data.subscribe((res: Item) => {
-      console.log("res", res)
       if (res) {
         this.itemDetails = res;
       } else {
