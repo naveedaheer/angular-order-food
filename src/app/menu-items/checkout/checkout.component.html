@@ -1,17 +1,18 @@
-<div>
-    <mat-form-field appearance="fill">
-        <mat-label>Input</mat-label>
-        <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Select</mat-label>
-        <mat-select>
-            <mat-option value="one">First option</mat-option>
-            <mat-option value="two">Second option</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Textarea</mat-label>
-        <textarea matInput></textarea>
-    </mat-form-field>
+<div class="container">
+    <div class="form">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Payment Option</mat-label>
+            <mat-select>
+                <mat-option value="one">Cash</mat-option>
+                <mat-option value="two">Restaurant Ticket</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button routerLink="/menu-items/checkout" class="full-width" mat-raised-button color="primary">Submit</button>
+        </div>
+    </div>
 </div>

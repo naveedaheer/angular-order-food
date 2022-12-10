@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    .form {
+        border: 1px solid lightgray;
+        padding: 40px;
+        max-width: 20%;
+        border-radius: 12px;
+    }
+}
