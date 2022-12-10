@@ -1,21 +1,20 @@
 <div class="container">
-    <div class="card">
+    <div *ngFor="let item of items" class="card">
         <div class="img-sec">
-            <img src="https://madhurasrecipe.com/wp-content/uploads/2020/10/Bahubali-Sandwich.jpg"
-                alt="Sandwich" title="Sandwich">
+            <img [src]="item?.imageUrl" [alt]="item?.name" [title]="item?.name">
         </div>
         <div class="card-content">
             <div>
-                <span><b>Price:</b> $25</span>
+                <span><b>Price:</b> {{item?.price | currency : 'USD'}}</span>
             </div>
             <div>
-                <span><b>Availability:</b> 35</span>
+                <span><b>Availability:</b> {{item?.availableQty}}</span>
             </div>
             <div>
-             <span><b>Discription:</b> When it comes to planning a restaurant menu, food is a lot like fashion. Items may be popular for a short time or may exist indefinitely.</span>
+                <span><b>Discription:</b> {{item?.description}}</span>
             </div>
             <div>
-                <button routerLink="menu-items/menu-details/1"  mat-raised-button color="primary">View Details</button>
+                <button routerLink="menu-items/menu-details/1" mat-raised-button color="primary">View Details</button>
             </div>
         </div>
     </div>
