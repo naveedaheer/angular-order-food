@@ -4,7 +4,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
     {
-        path: 'menu-details', component: ItemDetailsComponent
+        path: 'menu-details/:id', component: ItemDetailsComponent
     }
 ];
 
