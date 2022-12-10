@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-
 import { HomeComponent } from './home/home.component';
 
-import {MatCardModule} from '@angular/material/card';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule
+    SharedModule
   ]
 })
 export class HomeModule { }
