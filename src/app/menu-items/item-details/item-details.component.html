@@ -1,22 +1,20 @@
 <div class="container">
     <div class="card">
         <div>
-            <img width="80%" src="https://madhurasrecipe.com/wp-content/uploads/2020/10/Bahubali-Sandwich.jpg" alt="Sandwich"
-                title="Sandwich">
+            <img [src]="itemDetails?.imageUrl" [alt]="itemDetails?.name" [title]="itemDetails?.name">
         </div>
         <div class="card-content">
             <div>
-                <span><b>Price:</b> $25</span>
+                <span><b>Price:</b> {{itemDetails?.price | currency : 'USD'}}</span>
             </div>
             <div>
-                <span><b>Availability:</b> 35</span>
+                <span><b>Availability:</b> {{itemDetails?.availableQty}}</span>
             </div>
             <div>
-                <span><b>Discription:</b> When it comes to planning a restaurant menu, food is a lot like fashion. Items
-                    may be popular for a short time or may exist indefinitely.</span>
+                <span><b>Discription:</b> {{itemDetails?.description}}</span>
             </div>
             <div>
-                <button routerLink="/menu-items/checkout"  mat-raised-button color="primary">Checkout</button>
+                <button routerLink="/menu-items/checkout" mat-raised-button color="primary">Checkout</button>
             </div>
         </div>
     </div>

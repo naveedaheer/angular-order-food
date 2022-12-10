@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodMenuService } from 'src/app/shared/services/food-menu.service';
-
-interface Item {
-  availableQty: number;
-  description: string;
-  id: number;
-  imageUrl: string;
-  name: string;
-  price: number;
-}
+import { Item } from '../../shared/models/menuItem';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -18,12 +11,17 @@ interface Item {
 export class HomeComponent implements OnInit {
   items: Item[] = []
 
-  constructor(private menuService: FoodMenuService) { }
+  constructor(private menuService: FoodMenuService, private router: Router) { }
 
   ngOnInit() {
     this.menuService.getMenuItems().subscribe(res => {
       this.items = res
     })
+  }
+
+  viewItemDetails(item: Item) {
+    this.menuService.setItemDetails(item)
+    this.router.navigate(['menu-items/menu-details', item.id])
   }
 
 }

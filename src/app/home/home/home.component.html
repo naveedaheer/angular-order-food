@@ -14,7 +14,7 @@
                 <span><b>Discription:</b> {{item?.description}}</span>
             </div>
             <div>
-                <button routerLink="menu-items/menu-details/1" mat-raised-button color="primary">View Details</button>
+                <button mat-raised-button color="primary" (click)="viewItemDetails(item)">View Details</button>
             </div>
         </div>
     </div>
