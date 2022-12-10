@@ -14,7 +14,7 @@
                 <span><b>Discription:</b> {{itemDetails?.description}}</span>
             </div>
             <div>
-                <button routerLink="/menu-items/checkout" mat-raised-button color="primary">Checkout</button>
+                <button routerLink="/menu-items/checkout" mat-raised-button color="primary" [disabled]="!itemDetails?.availableQty">Checkout</button>
             </div>
         </div>
     </div>
