@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="form">
+    <div *ngIf="!submitted" class="form">
         <mat-form-field appearance="fill" class="full-width">
             <mat-label>Name</mat-label>
             <input matInput type="text">
@@ -12,7 +12,13 @@
             </mat-select>
         </mat-form-field>
         <div>
-            <button routerLink="/menu-items/checkout" class="full-width" mat-raised-button color="primary">Submit</button>
+            <button (click)="submitted=true" class="full-width" mat-raised-button color="primary">Place your
+                order</button>
         </div>
     </div>
+    <ng-container *ngIf="submitted">
+        <div class="thankyou">
+            <h1>Thank You for placing the order!</h1>
+        </div>
+    </ng-container>
 </div>
