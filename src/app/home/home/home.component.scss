@@ -1,17 +1,22 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     .card {
         border: 1px solid lightgray;
         padding: 0px 0px 10px 0px;
         max-width: 20%;
         border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px;
 
         .img-sec {
             img {
                 max-width: 100%;
-                height: auto;
+                height: 200px;
                 border-radius: 12px 12px 0px 0px;
             }
         }
