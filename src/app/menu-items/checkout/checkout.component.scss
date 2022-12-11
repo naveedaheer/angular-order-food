@@ -4,11 +4,16 @@
 
     .form {
         border: 1px solid lightgray;
-        padding: 40px;
+        padding: 30px;
+        margin-top: 10%;
         max-width: 20%;
         border-radius: 12px;
     }
     .thankyou {
-        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
     }
 }
