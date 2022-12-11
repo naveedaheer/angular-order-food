@@ -1,6 +1,7 @@
 <div class="container">
     <div *ngFor="let item of items" class="card">
         <div class="img-sec">
+            <h2>{{item?.name}}</h2>
             <img [src]="item?.imageUrl" [alt]="item?.name" [title]="item?.name">
         </div>
         <div class="card-content">
@@ -12,6 +13,11 @@
             </div>
             <div>
                 <span><b>Discription:</b> {{item?.description}}</span>
+            </div>
+
+            <div>
+                <h3 *ngIf="item?.availableQty" class="availble">Available</h3>
+                <h3 *ngIf="!item?.availableQty" class="not-availble">Not Available</h3>
             </div>
             <div>
                 <button mat-raised-button color="primary" (click)="viewItemDetails(item)">View Details</button>

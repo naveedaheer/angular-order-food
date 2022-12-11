@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
 
     .card {
@@ -14,12 +14,27 @@
         margin: 10px;
         width: 300px;
 
+        h2 {
+            text-align: center;
+            background-color: lightgray;
+            margin-bottom: 0;
+        }
+        
         .img-sec {
             img {
                 width: 100%;
                 height: 200px;
-                border-radius: 12px 12px 0px 0px;
             }
+        }
+
+        .availble {
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        .not-availble {
+            text-align: center;
+            background-color: lightcoral;
         }
 
         .card-content {
