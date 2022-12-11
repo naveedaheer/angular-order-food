@@ -3,6 +3,34 @@
     justify-content: center;
 
     .card {
-        width: 80%;
+        max-width: 450px;
+
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: lightgray;
+            margin-bottom: 0;
+        }
+
+        .card-content {
+            margin: 15px 0;
+            font-size: 15px;
+        }
+
+        .availble {
+            margin: 20px 0;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        .not-availble {
+            margin: 20px 0;
+            text-align: center;
+            background-color: lightcoral;
+        }
     }
 }

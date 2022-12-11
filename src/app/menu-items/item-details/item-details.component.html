@@ -1,6 +1,7 @@
 <div class="container">
     <div class="card">
         <div>
+            <h2>{{itemDetails?.name}}</h2>
             <img [src]="itemDetails?.imageUrl" [alt]="itemDetails?.name" [title]="itemDetails?.name">
         </div>
         <div class="card-content">
@@ -11,10 +12,14 @@
                 <span><b>Availability:</b> {{itemDetails?.availableQty}}</span>
             </div>
             <div>
-                <span><b>Discription:</b> {{itemDetails?.description}}</span>
+                <span><b>Description:</b> {{itemDetails?.description}}</span>
             </div>
             <div>
-                <button routerLink="/menu-items/checkout" mat-raised-button color="primary" [disabled]="!itemDetails?.availableQty">Checkout</button>
+                <h3 *ngIf="itemDetails?.availableQty" class="availble">Available</h3>
+                <h3 *ngIf="!itemDetails?.availableQty" class="not-availble">Not Available</h3>
+            </div>
+            <div>
+                <button routerLink="/menu-items/checkout" mat-raised-button color="primary" class="full-width" [disabled]="!itemDetails?.availableQty">Checkout</button>
             </div>
         </div>
     </div>
