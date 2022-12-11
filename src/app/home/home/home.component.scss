@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
     .card {
         border: 1px solid lightgray;
@@ -13,6 +14,7 @@
         justify-content: space-between;
         margin: 10px;
         width: 300px;
+        min-width: 300px;
 
         h2 {
             text-align: center;
@@ -42,7 +44,7 @@
         .card-content {
             margin: 15px 0;
             padding: 12px;
-            
+
             div {
                 padding: 4px 0;
             }
